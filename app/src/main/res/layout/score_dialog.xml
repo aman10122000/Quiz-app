@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Congrats you have passed"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/score_title"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/score_progress_indicator"
+            android:layout_centerVertical="true"
+            app:trackColor="@color/gray"
+            tools:progress="60"
+            app:trackCornerRadius="20dp"
+            app:trackThickness="8dp"
+            app:indicatorSize="90dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="50%"
+            android:textSize="18sp"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:id="@+id/score_progress_text"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="6 out of 10 questions are correct"
+        android:gravity="center"
+        android:id="@+id/score_subtitle"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:layout_margin="8dp"
+        android:id="@+id/finish_btn"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.576"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/star" />
+
+
+</LinearLayout>
